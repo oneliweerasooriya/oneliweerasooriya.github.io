@@ -1,3 +1,4 @@
+
 // Show a fancy modal message instead of alert
 function showMessage() {
     // Create modal elements
