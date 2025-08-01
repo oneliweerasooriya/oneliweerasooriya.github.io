@@ -1,31 +1,122 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fc;
+    color: #222;
+}
+
+.hero-bg {
+    background: linear-gradient(120deg, #007BFF 0%, #00c6ff 100%);
+    padding: 60px 0 40px 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.hero {
+    text-align: center;
+    color: #fff;
 }
 
 h1 {
-    color: #333;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-p {
-    color: #666;
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #e0eaff;
+}
+
+.button {
+    background: #fff;
+    color: #007BFF;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    background: #007BFF;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.features {
+    background: #fff;
+    margin-top: -30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    padding: 40px 30px 30px 30px;
+    text-align: center;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.features h2 {
+    color: #007BFF;
+    margin-bottom: 18px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.features li {
+    margin: 12px 0;
+    position: relative;
+    padding-left: 24px;
+}
+
+.features li:before {
+    content: "•";
+    color: #00c6ff;
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+    top: -2px;
+}
+
+footer {
+    text-align: center;
+    padding: 24px 0 12px 0;
+    color: #888;
+    font-size: 1rem;
+    background: none;
+}
+
+/* Animations */
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideup {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    80% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.animate-fadein {
+    animation: fadein 1s ease;
+}
+.animate-slideup {
+    animation: slideup 1.2s cubic-bezier(.23,1.01,.32,1) 0.2s both;
+}
+.animate-pop {
+    animation: pop 0.7s cubic-bezier(.23,1.01,.32,1) 0.5s both;
 }
